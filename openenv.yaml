@@ -1,0 +1,36 @@
+name: SupportAgentEnv
+version: 1.0.0
+description: A real-world simulation of a customer support agent resolving tickets using a knowledge base and user/order databases.
+author: AI Studio Builder
+tags: [customer-support, reasoning, tool-use]
+entry_point: app:app
+api_version: v1
+tasks:
+  - id: task_easy
+    name: Password Reset Request
+    difficulty: easy
+  - id: task_medium
+    name: Refund Eligibility Check
+    difficulty: medium
+  - id: task_hard
+    name: Complex Technical Support
+    difficulty: hard
+action_space:
+  type: dict
+  properties:
+    action_type:
+      type: string
+      enum: [search_kb, get_user, get_order, reply, resolve]
+    parameters:
+      type: object
+observation_space:
+  type: object
+  properties:
+    ticket_id: {type: string}
+    description: {type: string}
+    status: {type: string}
+    last_action_result: {type: string}
+    kb_results: {type: array, items: {type: string}}
+    user_data: {type: object}
+    order_data: {type: object}
+    messages_sent: {type: array, items: {type: string}}

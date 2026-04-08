@@ -1,0 +1,5 @@
+{
+  "name": "SupportAgent OpenEnv",
+  "description": "A real-world customer support agent environment following the OpenEnv specification.",
+  "requestFramePermissions": []
+}
