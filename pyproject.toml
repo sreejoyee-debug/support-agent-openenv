@@ -1,13 +1,14 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
-name = "support-agent-openenv"
+name = "support_agent_openenv"
 version = "0.1.0"
 description = "A real-world customer support agent environment following the OpenEnv specification."
 readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
 dependencies = [
     "fastapi",
     "uvicorn",
@@ -18,10 +19,8 @@ dependencies = [
     "requests",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-]
+[project.scripts]
+support-agent = "app:start"
 
-[tool.setuptools]
-py-modules = ["app", "environment", "models", "tasks", "inference"]
+[tool.hatch.build.targets.wheel]
+packages = ["."]
