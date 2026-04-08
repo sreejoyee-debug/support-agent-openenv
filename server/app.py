@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException, Body, Request
 from typing import Dict, Any, List, Optional
-from environment import SupportAgentEnv
-from models import Action, Observation, Reward, Info, State, ResetRequest
-from tasks import TASKS
+from .environment import SupportAgentEnv
+from .models import Action, Observation, Reward, Info, State, ResetRequest
+from .tasks import TASKS
 import os
 
 app = FastAPI(title="SupportAgent OpenEnv")

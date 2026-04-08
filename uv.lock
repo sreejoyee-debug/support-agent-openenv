@@ -1,0 +1,49 @@
+version = 1
+revision = 1
+
+[[package]]
+name = "support_agent_openenv"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fastapi" },
+    { name = "uvicorn" },
+    { name = "pydantic" },
+    { name = "openai" },
+    { name = "python-dotenv" },
+    { name = "pyyaml" },
+    { name = "requests" },
+    { name = "openenv" },
+]
+
+[[package]]
+name = "fastapi"
+version = "0.109.0"
+
+[[package]]
+name = "uvicorn"
+version = "0.27.0"
+
+[[package]]
+name = "pydantic"
+version = "2.6.0"
+
+[[package]]
+name = "openai"
+version = "1.12.0"
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+
+[[package]]
+name = "pyyaml"
+version = "6.0.1"
+
+[[package]]
+name = "requests"
+version = "2.31.0"
+
+[[package]]
+name = "openenv"
+version = "0.2.0"

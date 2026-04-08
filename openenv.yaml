@@ -3,7 +3,7 @@ version: 1.0.0
 description: A real-world simulation of a customer support agent resolving tickets using a knowledge base and user/order databases.
 author: AI Studio Builder
 tags: [customer-support, reasoning, tool-use]
-entry_point: app:app
+entry_point: server.app:app
 api_version: v1
 tasks:
   - id: task_easy

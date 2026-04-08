@@ -1,5 +1,5 @@
 from typing import Dict, Any, List
-from models import Observation, Action
+from .models import Observation, Action
 
 class BaseGrader:
     def grade(self, history: List[Dict[str, Any]], final_obs: Observation) -> float:

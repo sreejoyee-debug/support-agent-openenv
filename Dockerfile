@@ -10,4 +10,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the FastAPI server
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "3000"]

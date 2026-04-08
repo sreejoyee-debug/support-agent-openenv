@@ -17,10 +17,12 @@ dependencies = [
     "python-dotenv",
     "pyyaml",
     "requests",
+    "openenv>=0.2.0",
 ]
 
 [project.scripts]
-support-agent = "app:start"
+server = "server.app:start"
+support-agent = "server.app:start"
 
 [tool.hatch.build.targets.wheel]
-packages = ["."]
+packages = ["server"]

@@ -1,6 +1,6 @@
 import uuid
 from typing import Tuple, Dict, Any, List
-from models import Action, Observation, Reward, Info, State
+from .models import Action, Observation, Reward, Info, State
 
 class SupportAgentEnv:
     def __init__(self):
