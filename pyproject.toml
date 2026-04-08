@@ -21,8 +21,8 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "server.app:start"
-support-agent = "server.app:start"
+server = "server.app:main"
+support-agent = "server.app:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["server"]
