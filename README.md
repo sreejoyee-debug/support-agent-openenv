@@ -1,3 +1,15 @@
+---
+title: SupportAgent OpenEnv
+emoji: 🎧
+colorFrom: purple
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 3000
+tags:
+  - openenv
+---
+
 # 🎧 SupportAgent OpenEnv
 
 [![OpenEnv Spec](https://img.shields.io/badge/OpenEnv-v1.0.0-blueviolet?style=for-the-badge)](https://github.com/openenv/spec)
