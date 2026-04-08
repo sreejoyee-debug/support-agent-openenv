@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Body
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from environment import SupportAgentEnv
-from models import Action, Observation, Reward, Info, State
+from models import Action, Observation, Reward, Info, State, ResetRequest
 from tasks import TASKS
 import os
 
@@ -21,11 +21,12 @@ async def get_tasks():
     return [{"id": t["id"], "name": t["name"], "difficulty": t["difficulty"]} for t in TASKS]
 
 @app.post("/reset")
-async def reset(task_id: str = Body(..., embed=True)):
+async def reset(req: Optional[ResetRequest] = None):
     global current_task_id, history
+    task_id = (req.task_id if req else None) or "task_easy"
     task = next((t for t in TASKS if t["id"] == task_id), None)
     if not task:
-        raise HTTPException(status_code=404, detail="Task not found")
+        raise HTTPException(status_code=404, detail=f"Task '{task_id}' not found")
     
     current_task_id = task_id
     history = []

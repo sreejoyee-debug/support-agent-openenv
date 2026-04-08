@@ -28,3 +28,6 @@ class State(BaseModel):
     current_ticket_id: str
     internal_data: Dict[str, Any]
     history: List[Dict[str, Any]]
+
+class ResetRequest(BaseModel):
+    task_id: Optional[str] = Field(None, description="The ID of the task to start. Defaults to 'task_easy' if not provided.")
